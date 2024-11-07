@@ -200,3 +200,34 @@ function calculateTriangleArea() {
     document.getElementById('triangleArea').textContent = area.toFixed(2);
 }
 
+// 16 sidebar
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+
+// 17 calendar
+
+const monthYearElement = document.getElementById('month-year');
+const weekdayDayElement = document.getElementById('weekday-day');
+
+
+const today = new Date();
+const day = today.getDate();
+const month = today.toLocaleString('default', { month: 'long' });
+const year = today.getFullYear();
+const weekday = today.toLocaleString('default', { weekday: 'long' });
+
+
+monthYearElement.innerText = `${month} ${year}`;
+
+weekdayDayElement.innerText = `${weekday}, ${day}`;
+
+// 18 drag drop
+// in html
